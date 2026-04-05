@@ -1,6 +1,8 @@
 import { ArrowLeftIcon } from 'lucide-react';
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router';
+import toast from "react-hot-toast"
+import api from "../lib/axios"
 
 const CreatePage = () => {
   const [title, setTitle] = useState("");
@@ -70,7 +72,7 @@ const CreatePage = () => {
                   placeholder="Write your note here..."
                   className="textarea textarea-bordered h-32"
                   value={content}
-                  onChange={(e) => setTitle(e.target.value)}
+                  onChange={(e) => setContent(e.target.value)}
                 />
               </div>
 
